@@ -9,3 +9,24 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# --- macOS específico ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos temporales de carpetas
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Archivos de red y externos
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
