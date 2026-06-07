@@ -1,63 +1,140 @@
-# 🤖 Gemini Autonomous Code Agent
+# Gemini Autonomous Software Engineer Agent
 
-¡Bienvenido! Este repositorio contiene un Agente de IA autónomo construido con **Google Gemini**, diseñado para navegar por sistemas de archivos, leer código, ejecutar scripts de Python y corregir errores de forma independiente.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google-Gemini%202.0%20Flash-4285F4?logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google%20GenAI-SDK-34A853?logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/uv-Package%20Manager-5C4EE5" />
+  <img src="https://img.shields.io/badge/Architecture-Agentic%20Loop-orange" />
+  <img src="https://img.shields.io/badge/AI-Function%20Calling-red" />
+</p>
 
-Este proyecto nació como parte del desafío técnico en **Boot.dev**, donde llevamos la IA más allá de un simple chat, convirtiéndola en un colaborador activo con capacidad de ejecución.
+## Overview
 
----
+Gemini Autonomous Software Engineer Agent is an AI-powered coding assistant built with Google Gemini 2.0 Flash. The agent can autonomously navigate codebases, analyze source files, execute Python scripts, identify bugs, and apply fixes through an iterative reasoning process.
 
-## 🚀 Tecnologías Usadas
-
-* **Core AI:** [Google Gemini 2.0 Flash](https://ai.google.dev/) (vía Google GenAI SDK).
-* **Lenguaje:** Python 3.11+.
-* **Gestión de Dependencias:** [uv](https://github.com/astral-sh/uv) (extremadamente rápido).
-* **Arquitectura:** Agentic Loop (Observe-Think-Act).
-* **Tooling:** Function Calling, System Instructions, Context Management.
-
----
-
-## 🧠 Capacidades del Agente
-
-El agente opera en un bucle de razonamiento continuo y tiene acceso a las siguientes herramientas:
-
-1. **Exploración:** Lista archivos y directorios para entender la estructura del proyecto.
-2. **Lectura:** Analiza el contenido de archivos específicos.
-3. **Escritura:** Realiza modificaciones precisas en el código (como arreglar bugs de precedencia).
-4. **Ejecución:** Corre scripts de Python para validar sus propios arreglos.
-5. **Memoria:** Mantiene un historial de mensajes y resultados de herramientas para tomar decisiones informadas.
+Designed around modern agentic patterns, the system follows an Observe → Think → Act workflow, enabling it to solve software engineering tasks with minimal human intervention while operating inside a secure sandboxed environment.
 
 ---
 
-## 🛠️ Instalación y Uso
+## Tech Stack
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/tu-usuario/gemini-autonomous-agent.git
-   cd gemini-autonomous-agent
-   ```
-
-2. **Configurar el entorno:**
-   Crea un archivo `.env` con tu API Key:
-   ```
-   GEMINI_API_KEY=tu_api_key_aqui
-   ```
-
-3. **Ejecutar el agente:**
-   Pídele que resuelva una tarea compleja, como arreglar un bug en una carpeta específica:
-   ```bash
-   uv run main.py "Fix the bug in the calculator app: 3 + 7 * 2 shouldn't be 20." --verbose
-   ```
+| Category | Technology |
+|-----------|------------|
+| AI Model | Google Gemini 2.0 Flash |
+| SDK | Google GenAI SDK |
+| Language | Python 3.11+ |
+| Package Manager | uv |
+| Architecture | Agentic Loop |
+| Capabilities | Function Calling, Tool Orchestration, Context Management |
+| Security | Sandboxed File Operations |
 
 ---
 
-## 🏆 Créditos y Agradecimientos
+## Key Features
 
-Un aplauso gigante y de pie para **Boot.dev** 👏. Gracias a su enfoque práctico y riguroso ("Learn by doing"), este proyecto pasó de ser una idea a un agente funcional capaz de manipular archivos en un entorno de sandbox seguro. ¡La mejor academia para desarrolladores que quieren ensuciarse las manos con código real!
+### Autonomous Repository Exploration
+
+- Navigates project structures and directories.
+- Identifies relevant files for a given task.
+- Builds contextual understanding of the codebase.
+
+### Source Code Analysis
+
+- Reads and interprets source code across multiple files.
+- Maintains context throughout the reasoning process.
+- Understands dependencies and file relationships.
+
+### Automated Code Modification
+
+- Applies targeted code changes.
+- Fixes bugs and implementation issues.
+- Refactors code while preserving intended behavior.
+
+### Script Execution and Validation
+
+- Executes Python scripts to validate solutions.
+- Uses execution feedback to refine decisions.
+- Supports iterative debugging workflows.
+
+### Persistent Agent Memory
+
+- Tracks conversation history.
+- Stores tool outputs and previous actions.
+- Enables multi-step autonomous reasoning.
 
 ---
 
-## 🛡️ Sandbox & Seguridad
+## Architecture
 
-El agente está configurado para operar dentro de un directorio de trabajo seguro (`working_directory`), evitando que realice cambios accidentales fuera del área designada. Es un ejemplo perfecto de cómo implementar IA con barandillas de seguridad.
+The agent operates through a continuous decision-making loop:
 
-Desarrollado con ❤️ por Ignacio Robles (Nacho).
+text Observe    ↓ Analyze Context    ↓ Select Tool    ↓ Execute Action    ↓ Evaluate Result    ↓ Repeat Until Task Completion 
+
+This architecture allows the system to iteratively improve its understanding and approach until the requested objective is achieved.
+
+---
+
+## Installation
+
+### Clone the Repository
+
+bash git clone https://github.com/your-username/gemini-autonomous-agent.git cd gemini-autonomous-agent 
+
+### Configure Environment Variables
+
+Create a .env file:
+
+env GEMINI_API_KEY=your_api_key_here 
+
+### Install Dependencies
+
+bash uv sync 
+
+### Run the Agent
+
+Example task:
+
+bash uv run main.py \ "Fix the bug in the calculator app: 3 + 7 * 2 shouldn't be 20." \ --verbose 
+
+---
+
+## Security and Sandboxing
+
+The agent operates within a designated working directory, ensuring all file modifications remain restricted to a controlled environment.
+
+This project demonstrates how autonomous AI systems can safely interact with local codebases through carefully designed operational guardrails.
+
+---
+
+## Learning Objectives
+
+This project explores practical applications of:
+
+- Agentic AI Systems
+- Autonomous Reasoning Loops
+- Function Calling
+- Tool-Based AI Architectures
+- Code Generation and Refactoring
+- Context-Aware Decision Making
+- Safe AI Execution Environments
+
+---
+
+## Acknowledgements
+
+Special thanks to Boot.dev for promoting a hands-on, project-driven approach to software engineering education. Their practical methodology served as a strong source of inspiration throughout the development of this project.
+
+---
+
+## Author
+
+### Ignacio Robles
+
+Cloud Architect | Data Engineer | AI Solutions Builder
+
+Building intelligent systems that connect AI agents with real-world business data and cloud-native architectures.
+
+- GitHub: https://github.com/your-profile
+- LinkedIn: https://linkedin.com/in/your-profile
+- Website: https://yourwebsite.com
