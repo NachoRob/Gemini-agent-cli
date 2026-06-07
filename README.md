@@ -131,7 +131,7 @@ Special thanks to Boot.dev for promoting a hands-on, project-driven approach to 
 
 ### Ignacio Robles
 
-Cloud Architect | Data Engineer | AI Solutions Builder
+Cloud Engineer | Fullstack Dev | AI Solutions Builder
 
 Building intelligent systems that connect AI agents with real-world business data and cloud-native architectures.
 
