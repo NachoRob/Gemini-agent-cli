@@ -92,7 +92,7 @@ This architecture allows the system to progressively improve its understanding o
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/gemini-autonomous-agent.git
+git clone https://github.com/NachoRob/gemini-agent-cli.git
 cd gemini-autonomous-agent
 ```
 
@@ -165,6 +165,6 @@ Cloud Engineer | Full-Stack Developer | AI Solutions Builder
 
 Building intelligent systems that connect AI agents with business data, software products, and cloud-native architectures.
 
-- GitHub: https://github.com/your-profile
-- LinkedIn: https://linkedin.com/in/your-profile
-- Website: https://yourwebsite.com
+- GitHub: https://github.com/NachoRob
+- LinkedIn: www.linkedin.com/in/ignacioroblesr
+- Website: https://nachorob.github.io/portfolio/
