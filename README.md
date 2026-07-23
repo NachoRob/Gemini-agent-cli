@@ -1,26 +1,26 @@
 # Gemini Autonomous Software Engineer Agent
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Google-Gemini%202.0%20Flash-4285F4?logo=google&logoColor=white" />
-  <img src="https://img.shields.io/badge/Google%20GenAI-SDK-34A853?logo=google&logoColor=white" />
-  <img src="https://img.shields.io/badge/uv-Package%20Manager-5C4EE5" />
-  <img src="https://img.shields.io/badge/Architecture-Agentic%20Loop-orange" />
-  <img src="https://img.shields.io/badge/AI-Function%20Calling-red" />
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white" alt="Python 3.11+" />
+  <img src="https://img.shields.io/badge/Google-Gemini%202.0%20Flash-4285F4?logo=google&logoColor=white" alt="Google Gemini 2.0 Flash" />
+  <img src="https://img.shields.io/badge/Google%20GenAI-SDK-34A853?logo=google&logoColor=white" alt="Google GenAI SDK" />
+  <img src="https://img.shields.io/badge/uv-Package%20Manager-5C4EE5" alt="uv Package Manager" />
+  <img src="https://img.shields.io/badge/Architecture-Agentic%20Loop-orange" alt="Agentic Loop Architecture" />
+  <img src="https://img.shields.io/badge/AI-Function%20Calling-red" alt="Function Calling" />
 </p>
 
 ## Overview
 
-Gemini Autonomous Software Engineer Agent is an AI-powered coding assistant built with Google Gemini 2.0 Flash. The agent can autonomously navigate codebases, analyze source files, execute Python scripts, identify bugs, and apply fixes through an iterative reasoning process.
+Gemini Autonomous Software Engineer Agent is an AI-powered coding assistant built with Google Gemini 2.0 Flash. The agent can navigate codebases, analyze source files, execute Python scripts, identify bugs, and apply targeted fixes through an iterative decision-making process.
 
-Designed around modern agentic patterns, the system follows an Observe → Think → Act workflow, enabling it to solve software engineering tasks with minimal human intervention while operating inside a secure sandboxed environment.
+Designed around modern agentic patterns, the system follows an Observe → Analyze → Act workflow. This allows it to solve software engineering tasks with limited human intervention while operating within a controlled working environment.
 
 ---
 
 ## Tech Stack
 
 | Category | Technology |
-|-----------|------------|
+|---|---|
 | AI Model | Google Gemini 2.0 Flash |
 | SDK | Google GenAI SDK |
 | Language | Python 3.11+ |
@@ -35,15 +35,15 @@ Designed around modern agentic patterns, the system follows an Observe → Think
 
 ### Autonomous Repository Exploration
 
-- Navigates project structures and directories.
-- Identifies relevant files for a given task.
+- Navigates project directories and repository structures.
+- Identifies files relevant to a given task.
 - Builds contextual understanding of the codebase.
 
 ### Source Code Analysis
 
 - Reads and interprets source code across multiple files.
-- Maintains context throughout the reasoning process.
-- Understands dependencies and file relationships.
+- Maintains context throughout the execution cycle.
+- Understands dependencies and relationships between files.
 
 ### Automated Code Modification
 
@@ -53,15 +53,15 @@ Designed around modern agentic patterns, the system follows an Observe → Think
 
 ### Script Execution and Validation
 
-- Executes Python scripts to validate solutions.
-- Uses execution feedback to refine decisions.
-- Supports iterative debugging workflows.
+- Executes Python scripts to validate proposed solutions.
+- Uses execution feedback to refine subsequent actions.
+- Supports iterative debugging and verification workflows.
 
-### Persistent Agent Memory
+### Context and Execution History
 
-- Tracks conversation history.
-- Stores tool outputs and previous actions.
-- Enables multi-step autonomous reasoning.
+- Tracks conversation history and prior actions.
+- Stores tool outputs during the active session.
+- Supports multi-step reasoning across complex tasks.
 
 ---
 
@@ -69,61 +69,91 @@ Designed around modern agentic patterns, the system follows an Observe → Think
 
 The agent operates through a continuous decision-making loop:
 
-text Observe    ↓ Analyze Context    ↓ Select Tool    ↓ Execute Action    ↓ Evaluate Result    ↓ Repeat Until Task Completion 
+```text
+Observe
+   ↓
+Analyze Context
+   ↓
+Select Tool
+   ↓
+Execute Action
+   ↓
+Evaluate Result
+   ↓
+Repeat Until Task Completion
+```
 
-This architecture allows the system to iteratively improve its understanding and approach until the requested objective is achieved.
+This architecture allows the system to progressively improve its understanding of the task and adjust its approach based on execution results.
 
 ---
 
 ## Installation
 
-### Clone the Repository
+### 1. Clone the Repository
 
-bash git clone https://github.com/your-username/gemini-autonomous-agent.git cd gemini-autonomous-agent 
+```bash
+git clone https://github.com/your-username/gemini-autonomous-agent.git
+cd gemini-autonomous-agent
+```
 
-### Configure Environment Variables
+### 2. Configure Environment Variables
 
-Create a .env file:
+Create a `.env` file in the project root:
 
-env GEMINI_API_KEY=your_api_key_here 
+```env
+GEMINI_API_KEY=your_api_key_here
+```
 
-### Install Dependencies
+> Never commit your `.env` file or API keys to version control.
 
-bash uv sync 
+### 3. Install Dependencies
 
-### Run the Agent
+```bash
+uv sync
+```
+
+### 4. Run the Agent
 
 Example task:
 
-bash uv run main.py \ "Fix the bug in the calculator app: 3 + 7 * 2 shouldn't be 20." \ --verbose 
+```bash
+uv run main.py   "Fix the bug in the calculator app: 3 + 7 * 2 shouldn't be 20."   --verbose
+```
 
 ---
 
 ## Security and Sandboxing
 
-The agent operates within a designated working directory, ensuring all file modifications remain restricted to a controlled environment.
+The agent operates within a designated working directory, ensuring that file access and modifications remain restricted to a controlled environment.
 
-This project demonstrates how autonomous AI systems can safely interact with local codebases through carefully designed operational guardrails.
-
----
-
-## Learning Objectives
-
-This project explores practical applications of:
-
-- Agentic AI Systems
-- Autonomous Reasoning Loops
-- Function Calling
-- Tool-Based AI Architectures
-- Code Generation and Refactoring
-- Context-Aware Decision Making
-- Safe AI Execution Environments
+This design reduces the risk of unintended changes outside the target workspace and provides a safer foundation for experimenting with autonomous code execution.
 
 ---
 
-## Acknowledgements
+## Use Cases
 
-Special thanks to Boot.dev for promoting a hands-on, project-driven approach to software engineering education. Their practical methodology served as a strong source of inspiration throughout the development of this project.
+- Repository exploration and codebase analysis.
+- Automated debugging of Python applications.
+- Targeted source code modifications.
+- Iterative script execution and validation.
+- Prototyping tool-enabled AI agents.
+- Exploring safe patterns for autonomous software engineering workflows.
+
+---
+
+## Project Scope
+
+This project focuses on the orchestration layer of an autonomous coding agent, including:
+
+- Agentic reasoning loops.
+- Function calling.
+- Tool selection and execution.
+- Context management.
+- Source code inspection.
+- Controlled file modification.
+- Execution-based validation.
+
+It is intended as a practical implementation of an AI agent capable of interacting with local software projects through explicit tools and operational constraints.
 
 ---
 
@@ -131,9 +161,9 @@ Special thanks to Boot.dev for promoting a hands-on, project-driven approach to 
 
 ### Ignacio Robles
 
-Cloud Engineer | Fullstack Dev | AI Solutions Builder
+Cloud Engineer | Full-Stack Developer | AI Solutions Builder
 
-Building intelligent systems that connect AI agents with real-world business data and cloud-native architectures.
+Building intelligent systems that connect AI agents with business data, software products, and cloud-native architectures.
 
 - GitHub: https://github.com/your-profile
 - LinkedIn: https://linkedin.com/in/your-profile
